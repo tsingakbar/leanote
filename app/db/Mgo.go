@@ -2,7 +2,7 @@ package db
 
 import (
 	"fmt"
-	. "github.com/leanote/leanote/app/lea"
+	. "github.com/tsingakbar/leanote/app/lea"
 	"github.com/revel/revel"
 	"gopkg.in/mgo.v2"
 	"gopkg.in/mgo.v2/bson"
@@ -56,6 +56,9 @@ var Themes *mgo.Collection
 
 // session
 var Sessions *mgo.Collection
+
+// dict db and collection
+var DictEnEn *mgo.Collection
 
 // 初始化时连接数据库
 func Init(url, dbname string) {
@@ -166,6 +169,8 @@ func Init(url, dbname string) {
 
 	// session
 	Sessions = Session.DB(dbname).C("sessions")
+
+	DictEnEn = Session.DB("dict").C("enen")
 }
 
 func close() {

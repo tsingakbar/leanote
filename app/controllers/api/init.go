@@ -1,9 +1,9 @@
 package api
 
 import (
-	"github.com/leanote/leanote/app/info"
-	"github.com/leanote/leanote/app/service"
-	//		. "github.com/leanote/leanote/app/lea"
+	"github.com/tsingakbar/leanote/app/info"
+	"github.com/tsingakbar/leanote/app/service"
+	//		. "github.com/tsingakbar/leanote/app/lea"
 	"github.com/revel/revel"
 	"strings"
 )

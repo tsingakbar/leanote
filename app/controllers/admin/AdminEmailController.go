@@ -1,8 +1,8 @@
 package admin
 
 import (
-	"github.com/leanote/leanote/app/info"
-	. "github.com/leanote/leanote/app/lea"
+	"github.com/tsingakbar/leanote/app/info"
+	. "github.com/tsingakbar/leanote/app/lea"
 	"github.com/revel/revel"
 	"strconv"
 	"strings"

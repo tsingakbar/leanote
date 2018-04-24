@@ -2,9 +2,9 @@ package service
 
 import (
 	//	"fmt"
-	"github.com/leanote/leanote/app/db"
-	"github.com/leanote/leanote/app/info"
-	. "github.com/leanote/leanote/app/lea"
+	"github.com/tsingakbar/leanote/app/db"
+	"github.com/tsingakbar/leanote/app/info"
+	. "github.com/tsingakbar/leanote/app/lea"
 	"gopkg.in/mgo.v2/bson"
 	"sort"
 	"strings"
