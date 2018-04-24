@@ -12,4 +12,7 @@
 ## Operation and maintenance
 
 * `conf` and `files` folder under `revel.BasePath`(`$GOPATH/src/github.com/tsingakbar/leanote` whose GOPATH is pacakge's root folder) need to be configured or regularly backuped.
-* For server having extreamly small memory, the packaging step should disable cgo to forbidden uncontrolled pthread spawning, which is `CGO_ENABLED=0 revel package github.com/tsingakbar/leanote prod`. But this way usually requires packaging user clone an writable go setup such as `$HOME/goroot` to execute `GOROOT=$HOME/goroot CGO_ENABLED=0 revel package github.com/tsingakbar/leanote prod` because of rebuilding/installing `$GOROOT/pkg/linux_amd64/os/user.a` during packaing process.
+* For server having extreamly small memory, the packaging step should disable cgo to forbidden spawning thread by `pthread_create`, which is `CGO_ENABLED=0 revel package github.com/tsingakbar/leanote prod`. But this way usually requires packaging user clone an writable go setup such as `$HOME/goroot` to execute `GOROOT=$HOME/goroot CGO_ENABLED=0 revel package github.com/tsingakbar/leanote prod` because of rebuilding/installing `$GOROOT/pkg/linux_amd64/os/user.a` during packaing process.
+
+> why avoid using pthread_create:
+`pthread_create`, `fork` are all implement by syscall `clone()` on linux, which coresponse to kernel LWP. `pthread_create` by default use several MiB as thread stack(`man pthread_create`), and if cgo disabled, golang will use its own thread implementation which calls `clone()` directly with a small thread stack(but of course this thread will not able to run c code anymore).
