@@ -3576,7 +3576,7 @@ body {
 }
 .editorBg {
   height: 3px;
-  background: url(/images/editor/editor-shadow.png) no-repeat center bottom #f9faf4;
+  background: url(../../images/editor/editor-shadow.png) no-repeat center bottom #f9faf4;
 }
 .mce-btn-small i,
 .mce-menubtn.mce-btn-small span,

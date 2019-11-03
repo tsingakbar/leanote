@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'leanote';
-  src: url('../../fonts/leanote-font3/leanote.eot?-vcf23i');
-  src: url('../../fonts/leanote-font3/leanote.eot?#iefix-vcf23i') format('embedded-opentype'), url('../../fonts/leanote-font3/leanote.ttf?-vcf23i') format('truetype'), url('../../fonts/leanote-font3/leanote.woff?-vcf23i') format('woff'), url('../../fonts/leanote-font3/leanote.svg?-vcf23i#leanote') format('svg');
+  src: url('../fonts/leanote-font3/leanote.eot?-vcf23i');
+  src: url('../fonts/leanote-font3/leanote.eot?#iefix-vcf23i') format('embedded-opentype'), url('../fonts/leanote-font3/leanote.ttf?-vcf23i') format('truetype'), url('../fonts/leanote-font3/leanote.woff?-vcf23i') format('woff'), url('../fonts/leanote-font3/leanote.svg?-vcf23i#leanote') format('svg');
   font-weight: normal;
   font-style: normal;
 }
